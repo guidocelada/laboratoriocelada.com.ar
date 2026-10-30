@@ -543,6 +543,16 @@
             ".contact-actions a"
         ];
 
+        // Keep section anchors out of the URL so refreshing doesn't jump back to the last section visited
+        const clearHash = () => history.replaceState(null, "", location.pathname + location.search);
+        const navigation = performance.getEntriesByType?.("navigation")[0];
+
+        if (location.hash && navigation?.type === "reload") {
+            clearHash();
+        }
+
+        window.addEventListener("hashchange", clearHash);
+
         document.documentElement.classList.add("motion-ready");
 
         if (reviewList) {
