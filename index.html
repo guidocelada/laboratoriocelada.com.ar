@@ -85,8 +85,8 @@
             }
         }
     </style>
-    <link rel="preload" href="/public/css/site.css?v=insurance-1" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')" onerror="document.documentElement.classList.remove('css-loading')">
-    <noscript><link rel="stylesheet" href="/public/css/site.css?v=insurance-1"></noscript>
+    <link rel="preload" href="/public/css/site.css?v=insurance-2" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')" onerror="document.documentElement.classList.remove('css-loading')">
+    <noscript><link rel="stylesheet" href="/public/css/site.css?v=insurance-2"></noscript>
 
     <script type="application/ld+json">
     {
@@ -167,7 +167,7 @@
                 <a href="#domicilio">A domicilio</a>
                 <a href="#contacto">Contacto</a>
             </nav>
-            <a class="header-action" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20hacer%20una%20consulta%20al%20Laboratorio%20Celada">
+            <a class="header-action" href="https://wa.me/5492215400646">
                 <svg><use href="#icon-whatsapp"/></svg>
                 WhatsApp
             </a>
@@ -182,7 +182,7 @@
                     <a href="#resultados"><strong>Resultados</strong><span>Retiro, email o WhatsApp</span></a>
                     <a href="#domicilio"><strong>A domicilio</strong><span>Extracción a domicilio</span></a>
                     <a href="#contacto"><strong>Contacto y ubicación</strong><span>Av. 51 Nº1746 <span class="address-half">1/2</span>, casi esquina 30</span></a>
-                    <a class="menu-whatsapp" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20hacer%20una%20consulta%20al%20Laboratorio%20Celada">
+                    <a class="menu-whatsapp" href="https://wa.me/5492215400646">
                         <svg><use href="#icon-whatsapp"/></svg>
                         Consultar por WhatsApp
                     </a>
@@ -206,7 +206,7 @@
                     <li><strong>Resultados</strong><span>Retiro de 10:00 a 13:00. También por email o WhatsApp.</span></li>
                 </ul>
                 <div class="hero-cta">
-                    <a class="button primary" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20hacer%20una%20consulta%20al%20Laboratorio%20Celada">
+                    <a class="button primary" href="https://wa.me/5492215400646">
                         <svg><use href="#icon-whatsapp"/></svg>
                         Consultar por WhatsApp
                     </a>
@@ -287,14 +287,14 @@
                 <p>Revisá las indicaciones a continuación y consultanos si tu orden médica pide una preparación especial.</p>
             </div>
             <div class="preparation-list" id="faq">
-                <details open>
+                <details>
                     <summary>Qué traer</summary>
                     <div>
                         <p>Traé DNI y orden médica. Si tenés obra social o prepaga, traé también la credencial y verificá si necesitás autorización previa.</p>
                         <p>Para extracciones habituales no hace falta turno. Para estudios especiales o extracción a domicilio, consultanos antes.</p>
                     </div>
                 </details>
-                <details open>
+                <details>
                     <summary>Ayuno <span class="summary-hint">8 a 10 h, solo agua</span></summary>
                     <div>
                         <p>
@@ -417,9 +417,11 @@
                 <li hidden>Servesalud</li>
                 <li hidden>SPM Ostel jubilados y pensionados interior</li>
                 <li hidden>Unión Personal Austral OMI</li>
+                <li class="insurance-ask" id="insurance-ask" hidden>
+                    <a href="https://wa.me/5492215400646"><svg aria-hidden="true"><use href="#icon-whatsapp"/></svg>¿No está tu obra social? Consultanos</a>
+                </li>
             </ul>
             <button class="button ghost insurance-toggle" id="insurance-toggle" type="button">Ver todas las obras sociales</button>
-            <a class="button outline" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20consultar%20si%20atienden%20mi%20obra%20social">¿No está tu obra social? Consultanos</a>
         </section>
 
         <section class="quick-logistics" aria-label="Domicilio y resultados">
@@ -428,7 +430,7 @@
                     <p class="section-kicker">Extracción a domicilio</p>
                     <h2 id="home-title">Vamos a tu casa cuando acercarse no es fácil</h2>
                     <p>Servicio para pacientes que necesitan coordinar la extracción en domicilio. La disponibilidad se confirma por WhatsApp o teléfono.</p>
-                    <a class="button primary" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20consultar%20por%20extraccion%20a%20domicilio">Consultar extracción a domicilio</a>
+                    <a class="button primary" href="https://wa.me/5492215400646">Consultar extracción a domicilio</a>
                 </div>
                 <ol class="home-steps" aria-label="Cómo coordinar la extracción a domicilio">
                     <li><strong>Escribinos o llamanos</strong><span>Contanos qué estudios pide tu orden médica y dónde vivís.</span></li>
@@ -442,7 +444,7 @@
                     <p class="section-kicker">Resultados</p>
                     <h2 id="results-title">Retirá o recibí tus resultados</h2>
                     <p>Podés retirarlos impresos en el laboratorio de 10:00 a 13:00, recibirlos por email o consultarlos por WhatsApp.</p>
-                    <a class="button outline" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20consultar%20por%20mis%20resultados">Consultar resultados</a>
+                    <a class="button outline" href="https://wa.me/5492215400646">Consultar resultados</a>
                 </div>
                 <picture>
                     <source srcset="/public/assets/images/photos/13-360.webp 360w, /public/assets/images/photos/13-480.webp 480w, /public/assets/images/photos/13-720.webp 720w, /public/assets/images/photos/13.webp 1280w" sizes="(min-width: 1100px) 560px, (min-width: 760px) 42vw, calc(100vw - 32px)" type="image/webp">
@@ -463,7 +465,7 @@
             </picture>
             <div class="contact-actions">
                 <a href="https://maps.app.goo.gl/j3YgX48xKxyZjCq37"><svg><use href="#icon-pin"/></svg>Google Maps</a>
-                <a href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20hacer%20una%20consulta"><svg><use href="#icon-whatsapp"/></svg>WhatsApp</a>
+                <a href="https://wa.me/5492215400646"><svg><use href="#icon-whatsapp"/></svg>WhatsApp</a>
                 <a href="tel:2214519943"><svg><use href="#icon-phone"/></svg>Teléfono</a>
                 <a href="mailto:celadalab@gmail.com"><svg><use href="#icon-mail"/></svg>Email</a>
                 <a href="https://www.facebook.com/LaboratorioCelada/"><svg><use href="#icon-facebook"/></svg>Facebook</a>
@@ -495,7 +497,7 @@
             <div>
                 <h2>Contacto</h2>
                 <p><a href="tel:2214519943">Tel. (221) 451-9943</a></p>
-                <p><a href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20hacer%20una%20consulta">WhatsApp (221) 540-0646</a></p>
+                <p><a href="https://wa.me/5492215400646">WhatsApp (221) 540-0646</a></p>
                 <p><a href="mailto:celadalab@gmail.com">celadalab@gmail.com</a></p>
             </div>
         </div>
@@ -504,7 +506,8 @@
     <script>
         const mobileMenu = document.querySelector(".mobile-menu");
         const insuranceSearch = document.querySelector("#insurance-search");
-        const insuranceItems = [...document.querySelectorAll("#insurance-list li")];
+        const insuranceItems = [...document.querySelectorAll("#insurance-list li:not(.insurance-ask)")];
+        const insuranceAsk = document.querySelector("#insurance-ask");
         const insuranceCount = document.querySelector("#insurance-count");
         const insuranceToggle = document.querySelector("#insurance-toggle");
         const initialInsuranceCount = 8;
@@ -643,6 +646,8 @@
                 insuranceCount.textContent = "No aparece en la lista. Consultanos por WhatsApp para confirmar.";
                 if (insuranceToggle) insuranceToggle.hidden = true;
             }
+
+            if (insuranceAsk) insuranceAsk.hidden = query ? visible > 0 : !insuranceExpanded;
         };
 
         insuranceSearch?.addEventListener("input", updateInsuranceList);

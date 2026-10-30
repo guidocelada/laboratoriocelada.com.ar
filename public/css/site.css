@@ -1025,6 +1025,30 @@ blockquote footer {
     display: none;
 }
 
+.insurance-list .insurance-ask {
+    grid-column: 1 / -1;
+    padding: 0;
+    border-color: rgb(220 169 0 / 55%);
+    background: var(--yellow-soft);
+}
+
+.insurance-ask a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 52px;
+    padding: 0.65rem 0.8rem;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.insurance-ask svg {
+    flex: 0 0 auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--green);
+}
+
 .insurance-toggle {
     justify-self: start;
     min-height: 44px;
