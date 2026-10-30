@@ -178,7 +178,7 @@
                 </summary>
                 <div class="mobile-menu-panel">
                     <a href="#estudios"><strong>Preparación</strong><span>Qué traer, ayuno y muestras</span></a>
-                    <a href="#obras-sociales"><strong>Obras sociales</strong><span>Coberturas y requisitos</span></a>
+                    <a href="#obras-sociales"><strong>Obras sociales</strong><span>Prepagas y requisitos</span></a>
                     <a href="#resultados"><strong>Resultados</strong><span>Retiro, email o WhatsApp</span></a>
                     <a href="#domicilio"><strong>A domicilio</strong><span>Extracción a domicilio</span></a>
                     <a href="#contacto"><strong>Contacto y ubicación</strong><span>Av. 51 Nº1746 <span class="address-half">1/2</span>, casi esquina 30</span></a>
@@ -233,7 +233,7 @@
             </a>
             <a class="service-tile" href="#obras-sociales">
                 <svg><use href="#icon-clipboard"/></svg>
-                <strong>Coberturas</strong>
+                <strong>Obras sociales</strong>
             </a>
         </section>
 
@@ -362,7 +362,7 @@
 
         <section class="insurance" id="obras-sociales" aria-labelledby="insurance-title">
             <div class="section-heading">
-                <p class="section-kicker">Coberturas</p>
+                <p class="section-kicker">Obras sociales y prepagas</p>
                 <h2 id="insurance-title">¿Atendemos tu obra social?</h2>
                 <p>Trabajamos con más de 45 obras sociales. Antes de venir, verificá tu cobertura y si requiere autorización previa.</p>
             </div>
@@ -370,7 +370,7 @@
                 <span>Buscar obra social</span>
                 <input id="insurance-search" type="search" autocomplete="off" placeholder="Ej: IOMA, OSDE, PAMI">
             </label>
-            <p class="insurance-count" id="insurance-count" aria-live="polite">Mostramos algunas coberturas frecuentes. Usá el buscador para consultar el listado completo.</p>
+            <p class="insurance-count" id="insurance-count" aria-live="polite">Mostramos algunas obras sociales frecuentes. Usá el buscador para consultar el listado completo.</p>
             <ul class="insurance-list" id="insurance-list">
                 <li>IOMA</li>
                 <li>OSDE</li>
@@ -418,8 +418,8 @@
                 <li hidden>SPM Ostel jubilados y pensionados interior</li>
                 <li hidden>Unión Personal Austral OMI</li>
             </ul>
-            <button class="button ghost insurance-toggle" id="insurance-toggle" type="button">Ver todas las coberturas</button>
-            <a class="button outline" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20consultar%20si%20atienden%20mi%20obra%20social">Consultar una cobertura no listada</a>
+            <button class="button ghost insurance-toggle" id="insurance-toggle" type="button">Ver todas las obras sociales</button>
+            <a class="button outline" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20consultar%20si%20atienden%20mi%20obra%20social">¿No está tu obra social? Consultanos</a>
         </section>
 
         <section class="quick-logistics" aria-label="Domicilio y resultados">
@@ -617,20 +617,20 @@
 
             if (!query) {
                 insuranceCount.textContent = insuranceExpanded
-                    ? "Mostrando todas las coberturas."
-                    : "Mostrando 8 coberturas frecuentes. Buscá por nombre para ver otras.";
+                    ? "Mostrando todas las obras sociales."
+                    : "Mostrando 8 obras sociales frecuentes. Buscá por nombre para ver otras.";
                 if (insuranceToggle) {
                     insuranceToggle.hidden = false;
-                    insuranceToggle.textContent = insuranceExpanded ? "Ver menos coberturas" : "Ver todas las coberturas";
+                    insuranceToggle.textContent = insuranceExpanded ? "Ver menos obras sociales" : "Ver todas las obras sociales";
                 }
             } else if (visible === 1) {
-                insuranceCount.textContent = "Encontramos 1 cobertura.";
+                insuranceCount.textContent = "Encontramos 1 obra social.";
                 if (insuranceToggle) insuranceToggle.hidden = true;
             } else if (visible > 1) {
-                insuranceCount.textContent = `Encontramos ${visible} coberturas.`;
+                insuranceCount.textContent = `Encontramos ${visible} obras sociales.`;
                 if (insuranceToggle) insuranceToggle.hidden = true;
             } else {
-                insuranceCount.textContent = "No aparece en la lista. Consulte al laboratorio para confirmar.";
+                insuranceCount.textContent = "No aparece en la lista. Consultanos por WhatsApp para confirmar.";
                 if (insuranceToggle) insuranceToggle.hidden = true;
             }
         };
