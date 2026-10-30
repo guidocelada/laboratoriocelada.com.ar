@@ -42,8 +42,9 @@
     --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
     --motion-fast: 220ms;
     --motion-menu: 240ms;
-    --motion-stagger: 420ms;
+    --motion-stagger: 360ms;
     --motion-reveal: 640ms;
+    --motion-section: 420ms;
     --motion-hero: 680ms;
 }
 
@@ -1093,8 +1094,8 @@ blockquote footer {
 
 .motion-ready [data-reveal] {
     opacity: 0;
-    transform: translateY(12px);
-    transition: opacity var(--motion-reveal) var(--ease-out-quint), transform var(--motion-reveal) var(--ease-out-quint);
+    transform: translateY(8px);
+    transition: opacity var(--motion-section) var(--ease-out-quint), transform var(--motion-section) var(--ease-out-quint);
 }
 
 .motion-ready [data-reveal].is-visible {
