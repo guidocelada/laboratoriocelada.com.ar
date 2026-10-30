@@ -85,8 +85,8 @@
             }
         }
     </style>
-    <link rel="preload" href="/public/css/site.css?v=footer-3" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')" onerror="document.documentElement.classList.remove('css-loading')">
-    <noscript><link rel="stylesheet" href="/public/css/site.css?v=footer-3"></noscript>
+    <link rel="preload" href="/public/css/site.css?v=motion-2" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')" onerror="document.documentElement.classList.remove('css-loading')">
+    <noscript><link rel="stylesheet" href="/public/css/site.css?v=motion-2"></noscript>
 
     <script type="application/ld+json">
     {
@@ -575,6 +575,12 @@
                     if (entry.isIntersecting) {
                         entry.target.classList.add("is-visible");
                         observer.unobserve(entry.target);
+                        // Once the stagger has played, hand transitions back to the element's own hover styles
+                        setTimeout(() => {
+                            entry.target.querySelectorAll("[data-stagger-item]").forEach((item) => {
+                                delete item.dataset.staggerItem;
+                            });
+                        }, 1000);
                     }
                 });
             }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" })

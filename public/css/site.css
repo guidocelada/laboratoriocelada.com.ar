@@ -1485,3 +1485,12 @@ blockquote footer {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
+
+@media print {
+    .motion-ready [data-reveal],
+    .motion-ready [data-stagger-item] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
