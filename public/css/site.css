@@ -1362,3 +1362,114 @@ blockquote footer {
         transform: none !important;
     }
 }
+
+.summary-hint {
+    margin-left: 0.5rem;
+    color: var(--ink-soft);
+    font-weight: 400;
+}
+
+.home-steps {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: home-step;
+}
+
+.home-steps li {
+    display: grid;
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+    column-gap: 0.9rem;
+    padding: 1rem;
+    border-radius: var(--radius);
+    background: var(--yellow-soft);
+    counter-increment: home-step;
+}
+
+.home-steps li::before {
+    content: counter(home-step);
+    grid-row: span 2;
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: var(--yellow);
+    font-family: var(--display);
+    font-weight: 800;
+}
+
+.home-steps span {
+    color: var(--ink-soft);
+}
+
+.contact-photo,
+.contact-photo img {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.contact-photo {
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.contact-photo img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+.footer-info {
+    display: grid;
+    gap: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgb(255 255 255 / 14%);
+}
+
+.footer-info h2 {
+    margin: 0 0 0.35rem;
+    color: var(--yellow);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.footer-info p {
+    margin: 0;
+}
+
+.site-footer .footer-info a {
+    display: inline-block;
+    min-height: 44px;
+    padding-block: 0.15rem;
+    color: white;
+}
+
+@media (min-width: 760px) {
+    .contact {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+        column-gap: 2.5rem;
+    }
+
+    .contact-photo {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        align-self: stretch;
+        aspect-ratio: 3 / 4;
+    }
+
+    .contact-actions {
+        grid-column: 1;
+        grid-row: 2;
+        grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+    }
+
+    .footer-info {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

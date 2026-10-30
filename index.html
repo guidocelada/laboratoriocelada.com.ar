@@ -85,8 +85,8 @@
             }
         }
     </style>
-    <link rel="preload" href="/public/css/site.css?v=motion-1" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')" onerror="document.documentElement.classList.remove('css-loading')">
-    <noscript><link rel="stylesheet" href="/public/css/site.css?v=motion-1"></noscript>
+    <link rel="preload" href="/public/css/site.css?v=footer-1" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')" onerror="document.documentElement.classList.remove('css-loading')">
+    <noscript><link rel="stylesheet" href="/public/css/site.css?v=footer-1"></noscript>
 
     <script type="application/ld+json">
     {
@@ -202,7 +202,7 @@
                 <h1 id="hero-title">Tu laboratorio de confianza<br/>en La Plata</h1>
                 <p class="hero-lead">Análisis clínicos confiables, atención personalizada y más de 40 años acompañando a las familias platenses.</p>
                 <ul class="hero-facts" aria-label="Información rápida">
-                    <li><strong>Extracciones</strong><span>Lun a vie, 6:30 a 10:00. Sin turno previo.</span></li>
+                    <li><strong>Extracciones</strong><span>Lun a vie, 6:30 a 10:00. Sin turno previo. Sáb, dom y feriados cerrado.</span></li>
                     <li><strong>Resultados</strong><span>Retiro de 10:00 a 13:00. También por email o WhatsApp.</span></li>
                 </ul>
                 <div class="hero-cta">
@@ -294,8 +294,8 @@
                         <p>Para extracciones habituales no hace falta turno. Para estudios especiales o extracción a domicilio, consultanos antes.</p>
                     </div>
                 </details>
-                <details>
-                    <summary>Ayuno</summary>
+                <details open>
+                    <summary>Ayuno <span class="summary-hint">8 a 10 h, solo agua</span></summary>
                     <div>
                         <p>
                           Para análisis de sangre, vení con <strong>8 horas de ayuno</strong>.
@@ -430,10 +430,11 @@
                     <p>Servicio para pacientes que necesitan coordinar la extracción en domicilio. La disponibilidad se confirma por WhatsApp o teléfono.</p>
                     <a class="button primary" href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20consultar%20por%20extraccion%20a%20domicilio">Consultar extracción a domicilio</a>
                 </div>
-                <picture>
-                    <source srcset="/public/assets/images/photos/6-360.webp 360w, /public/assets/images/photos/6-480.webp 480w, /public/assets/images/photos/6-720.webp 720w, /public/assets/images/photos/6.webp 960w" sizes="(min-width: 1100px) 560px, (min-width: 760px) 42vw, calc(100vw - 32px)" type="image/webp">
-                    <img src="/public/assets/images/photos/6.png" alt="Frente del Laboratorio Celada" width="360" height="480" loading="lazy" decoding="async">
-                </picture>
+                <ol class="home-steps" aria-label="Cómo coordinar la extracción a domicilio">
+                    <li><strong>Escribinos o llamanos</strong><span>Contanos qué estudios pide tu orden médica y dónde vivís.</span></li>
+                    <li><strong>Confirmamos el día</strong><span>Te avisamos la disponibilidad y cómo prepararte.</span></li>
+                    <li><strong>Vamos a tu casa</strong><span>Hacemos la extracción y te enviamos los resultados.</span></li>
+                </ol>
             </div>
 
             <div class="split-section reverse" id="resultados" aria-labelledby="results-title">
@@ -455,7 +456,12 @@
                 <p class="section-kicker">Contáctanos</p>
                 <h2 id="contact-title">Av. 51 Nº1746 <span class="address-half">1/2</span> <br/>casi esquina 30<br/>La Plata</h2>
                 <p>Extracciones de lunes a viernes de 6:30 a 10:00. Resultados de 10:00 a 13:00.</p>
+                <p>Sábados, domingos y feriados: cerrado.</p>
             </div>
+            <picture class="contact-photo">
+                <source srcset="/public/assets/images/photos/6-360.webp 360w, /public/assets/images/photos/6-480.webp 480w, /public/assets/images/photos/6-720.webp 720w, /public/assets/images/photos/6.webp 960w" sizes="(min-width: 760px) 360px, calc(100vw - 32px)" type="image/webp">
+                <img src="/public/assets/images/photos/6.png" alt="Frente del Laboratorio Celada en Av. 51 Nº1746 1/2" width="360" height="480" loading="lazy" decoding="async">
+            </picture>
             <div class="contact-actions">
                 <a href="https://maps.app.goo.gl/j3YgX48xKxyZjCq37"><svg><use href="#icon-pin"/></svg>Google Maps</a>
                 <a href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20hacer%20una%20consulta"><svg><use href="#icon-whatsapp"/></svg>WhatsApp</a>
@@ -472,6 +478,24 @@
             <span class="brand-text"><span>Laboratorio</span><strong>Celada</strong></span>
         </div>
         <p>Más de 40 años brindando análisis clínicos de calidad en La Plata.</p>
+        <div class="footer-info">
+            <div>
+                <h2>Dirección</h2>
+                <p><a href="https://maps.app.goo.gl/j3YgX48xKxyZjCq37">Av. 51 Nº1746 1/2, casi esquina 30, La Plata</a></p>
+            </div>
+            <div>
+                <h2>Horarios</h2>
+                <p>Extracciones: lun a vie, 6:30 a 10:00</p>
+                <p>Resultados: lun a vie, 10:00 a 13:00</p>
+                <p>Sáb, dom y feriados: cerrado</p>
+            </div>
+            <div>
+                <h2>Contacto</h2>
+                <p><a href="tel:2214519943">Tel. (221) 451-9943</a></p>
+                <p><a href="https://wa.me/5492215400646?text=Hola%2C%20quiero%20hacer%20una%20consulta">WhatsApp (221) 540-0646</a></p>
+                <p><a href="mailto:celadalab@gmail.com">celadalab@gmail.com</a></p>
+            </div>
+        </div>
     </footer>
 
     <script>
