@@ -168,11 +168,11 @@
                 <a href="#contacto">Contacto</a>
             </nav>
             <a class="header-action" href="https://wa.me/5492215400646">
-                <svg><use href="#icon-whatsapp"/></svg>
+                <svg aria-hidden="true"><use href="#icon-whatsapp"/></svg>
                 WhatsApp
             </a>
             <details class="mobile-menu">
-                <summary aria-label="Abrir menú">
+                <summary aria-label="Menú">
                     <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
                     <span class="menu-word" aria-hidden="true">Menú</span>
                 </summary>
@@ -181,9 +181,9 @@
                     <a href="#obras-sociales"><strong>Obras sociales</strong><span>Prepagas y requisitos</span></a>
                     <a href="#resultados"><strong>Resultados</strong><span>Retiro, email o WhatsApp</span></a>
                     <a href="#domicilio"><strong>A domicilio</strong><span>Extracción a domicilio</span></a>
-                    <a href="#contacto"><strong>Contacto y ubicación</strong><span>Av. 51 Nº1746 <span class="address-half">1/2</span>, casi esquina 30</span></a>
+                    <a href="#contacto"><strong>Contacto y ubicación</strong><span>Av. 51 Nº1746 <span class="address-half" aria-hidden="true">1/2</span><span class="sr-only">y medio</span>, casi esquina 30</span></a>
                     <a class="menu-whatsapp" href="https://wa.me/5492215400646">
-                        <svg><use href="#icon-whatsapp"/></svg>
+                        <svg aria-hidden="true"><use href="#icon-whatsapp"/></svg>
                         Consultar por WhatsApp
                     </a>
                 </div>
@@ -202,17 +202,17 @@
                 <h1 id="hero-title">Tu laboratorio de confianza<br/>en La Plata</h1>
                 <p class="hero-lead">Análisis clínicos confiables, atención personalizada y más de 40 años acompañando a las familias platenses.</p>
                 <ul class="hero-facts" aria-label="Información rápida">
-                    <li><strong>Extracciones</strong><span>Lun a vie, 6:30 a 10:00. Sin turno previo.</span></li>
+                    <li><strong>Extracciones</strong><span><span aria-hidden="true">Lun a vie</span><span class="sr-only">Lunes a viernes</span>, 6:30 a 10:00. Sin turno previo.</span></li>
                     <li><strong>Resultados</strong><span>Retiro de 10:00 a 13:00. También por email o WhatsApp.</span></li>
                 </ul>
                 <div class="hero-cta">
                     <a class="button primary" href="https://wa.me/5492215400646">
-                        <svg><use href="#icon-whatsapp"/></svg>
+                        <svg aria-hidden="true"><use href="#icon-whatsapp"/></svg>
                         Consultar por WhatsApp
                     </a>
                     <a class="button ghost" href="https://maps.app.goo.gl/j3YgX48xKxyZjCq37">
-                        <svg><use href="#icon-pin"/></svg>
-                        Av. 51 Nº1746 1/2, casi esquina 30
+                        <svg aria-hidden="true"><use href="#icon-pin"/></svg>
+                        <span>Av. 51 Nº1746 <span aria-hidden="true">1/2</span><span class="sr-only">y medio</span>, casi esquina 30</span>
                     </a>
                 </div>
             </div>
@@ -220,19 +220,19 @@
 
         <section class="service-board" id="servicios" aria-label="Servicios principales">
             <a class="service-tile" href="#estudios">
-                <svg><use href="#icon-vial"/></svg>
+                <svg aria-hidden="true"><use href="#icon-vial"/></svg>
                 <strong>Análisis clínicos</strong>
             </a>
             <a class="service-tile" href="#domicilio">
-                <svg><use href="#icon-home"/></svg>
+                <svg aria-hidden="true"><use href="#icon-home"/></svg>
                 <strong>Extracciones a domicilio</strong>
             </a>
             <a class="service-tile" href="#resultados">
-                <svg><use href="#icon-mail"/></svg>
+                <svg aria-hidden="true"><use href="#icon-mail"/></svg>
                 <strong>Resultados</strong>
             </a>
             <a class="service-tile" href="#obras-sociales">
-                <svg><use href="#icon-clipboard"/></svg>
+                <svg aria-hidden="true"><use href="#icon-clipboard"/></svg>
                 <strong>Obras sociales</strong>
             </a>
         </section>
@@ -241,7 +241,7 @@
             <div class="review-header">
                 <p class="section-kicker">Opiniones de nuestros pacientes</p>
                 <h2 id="reviews-title">Pacientes que vuelven por la atención</h2>
-                <div class="rating-line" aria-label="Calificación de Google Maps">
+                <div class="rating-line" role="img" aria-label="Calificación de 5 estrellas en Google Maps">
                     <span class="stars">★★★★★</span>
                     <span></span>
                 </div>
@@ -421,7 +421,7 @@
                     <a href="https://wa.me/5492215400646"><svg aria-hidden="true"><use href="#icon-whatsapp"/></svg>¿No está tu obra social? Consultanos</a>
                 </li>
             </ul>
-            <button class="button ghost insurance-toggle" id="insurance-toggle" type="button">Ver todas las obras sociales</button>
+            <button class="button ghost insurance-toggle" id="insurance-toggle" type="button" aria-controls="insurance-list" aria-expanded="false">Ver todas las obras sociales</button>
         </section>
 
         <section class="quick-logistics" aria-label="Domicilio y resultados">
@@ -456,19 +456,19 @@
         <section class="contact" id="contacto" aria-labelledby="contact-title">
             <div>
                 <p class="section-kicker">Contáctanos</p>
-                <h2 id="contact-title">Av. 51 Nº1746 <span class="address-half">1/2</span> <br/>casi esquina 30<br/>La Plata</h2>
+                <h2 id="contact-title">Av. 51 Nº1746 <span class="address-half" aria-hidden="true">1/2</span><span class="sr-only">y medio</span> <br/>casi esquina 30<br/>La Plata</h2>
                 <p>Extracciones de lunes a viernes de 6:30 a 10:00. Resultados de 10:00 a 13:00.</p>
             </div>
             <picture class="contact-photo">
                 <source srcset="/public/assets/images/photos/6-360.webp 360w, /public/assets/images/photos/6-480.webp 480w, /public/assets/images/photos/6-720.webp 720w, /public/assets/images/photos/6.webp 960w" sizes="(min-width: 760px) 360px, calc(100vw - 32px)" type="image/webp">
-                <img src="/public/assets/images/photos/6.png" alt="Frente del Laboratorio Celada en Av. 51 Nº1746 1/2" width="360" height="480" loading="lazy" decoding="async">
+                <img src="/public/assets/images/photos/6.png" alt="Frente del Laboratorio Celada en Av. 51 Nº1746 y medio" width="360" height="480" loading="lazy" decoding="async">
             </picture>
             <div class="contact-actions">
-                <a href="https://maps.app.goo.gl/j3YgX48xKxyZjCq37"><svg><use href="#icon-pin"/></svg>Google Maps</a>
-                <a href="https://wa.me/5492215400646"><svg><use href="#icon-whatsapp"/></svg>WhatsApp</a>
-                <a href="tel:2214519943"><svg><use href="#icon-phone"/></svg>Teléfono</a>
-                <a href="mailto:celadalab@gmail.com"><svg><use href="#icon-mail"/></svg>Email</a>
-                <a href="https://www.facebook.com/LaboratorioCelada/"><svg><use href="#icon-facebook"/></svg>Facebook</a>
+                <a href="https://maps.app.goo.gl/j3YgX48xKxyZjCq37" aria-label="Google Maps: ver cómo llegar"><svg aria-hidden="true"><use href="#icon-pin"/></svg>Google Maps</a>
+                <a href="https://wa.me/5492215400646" aria-label="WhatsApp: escribir al 221 540 0646"><svg aria-hidden="true"><use href="#icon-whatsapp"/></svg>WhatsApp</a>
+                <a href="tel:2214519943" aria-label="Teléfono: llamar al 221 451 9943"><svg aria-hidden="true"><use href="#icon-phone"/></svg>Teléfono</a>
+                <a href="mailto:celadalab@gmail.com" aria-label="Email: escribir a celadalab@gmail.com"><svg aria-hidden="true"><use href="#icon-mail"/></svg>Email</a>
+                <a href="https://www.facebook.com/LaboratorioCelada/"><svg aria-hidden="true"><use href="#icon-facebook"/></svg>Facebook</a>
             </div>
         </section>
     </main>
@@ -482,12 +482,12 @@
         <div class="footer-info">
             <div>
                 <h2>Dirección</h2>
-                <p><a href="https://maps.app.goo.gl/j3YgX48xKxyZjCq37">Av. 51 Nº1746 1/2, casi esquina 30, La Plata</a></p>
+                <p><a href="https://maps.app.goo.gl/j3YgX48xKxyZjCq37">Av. 51 Nº1746 <span aria-hidden="true">1/2</span><span class="sr-only">y medio</span>, casi esquina 30, La Plata</a></p>
             </div>
             <div>
                 <h2>Horarios</h2>
-                <p>Extracciones: lun a vie, 6:30 a 10:00</p>
-                <p>Resultados: lun a vie, 10:00 a 13:00</p>
+                <p>Extracciones: <span aria-hidden="true">lun a vie</span><span class="sr-only">lunes a viernes</span>, 6:30 a 10:00</p>
+                <p>Resultados: <span aria-hidden="true">lun a vie</span><span class="sr-only">lunes a viernes</span>, 10:00 a 13:00</p>
             </div>
             <div>
                 <h2>Dirección técnica</h2>
@@ -586,6 +586,7 @@
                 if (insuranceToggle) {
                     insuranceToggle.hidden = false;
                     insuranceToggle.textContent = insuranceExpanded ? "Ver menos obras sociales" : "Ver todas las obras sociales";
+                    insuranceToggle.setAttribute("aria-expanded", String(insuranceExpanded));
                 }
             } else if (visible === 1) {
                 insuranceCount.textContent = "Encontramos 1 obra social.";
