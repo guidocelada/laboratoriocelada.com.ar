@@ -587,6 +587,7 @@ h2 {
     border-radius: var(--radius);
     font-family: var(--display);
     font-weight: 700;
+    text-align: center;
 }
 
 .primary {
@@ -1026,15 +1027,20 @@ blockquote footer {
 
 .insurance-toggle {
     justify-self: start;
-    border: 1px solid var(--ink);
+    min-height: 44px;
+    padding: 0.5rem 0;
+    border: 0;
     background: transparent;
     color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--yellow-deep);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
     cursor: pointer;
 }
 
 .insurance-toggle:hover {
-    background: var(--yellow-soft);
-    border-color: rgb(220 169 0 / 55%);
+    text-decoration-color: var(--ink);
 }
 
 .insurance-toggle[hidden] {
