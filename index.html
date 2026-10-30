@@ -653,8 +653,11 @@
         insuranceSearch?.addEventListener("input", updateInsuranceList);
 
         insuranceToggle?.addEventListener("click", () => {
+            // Keep the toggle where it was on screen so collapsing the long list doesn't leave the reader further down the page
+            const toggleTop = insuranceToggle.getBoundingClientRect().top;
             insuranceExpanded = !insuranceExpanded;
             updateInsuranceList();
+            window.scrollBy({ top: insuranceToggle.getBoundingClientRect().top - toggleTop, behavior: "instant" });
         });
 
         updateInsuranceList();
