@@ -85,8 +85,8 @@
             }
         }
     </style>
-    <link rel="preload" href="/public/css/site.css?v=motion-3" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')" onerror="document.documentElement.classList.remove('css-loading')">
-    <noscript><link rel="stylesheet" href="/public/css/site.css?v=motion-3"></noscript>
+    <link rel="preload" href="/public/css/site.css?v=motion-4" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.remove('css-loading')" onerror="document.documentElement.classList.remove('css-loading')">
+    <noscript><link rel="stylesheet" href="/public/css/site.css?v=motion-4"></noscript>
 
     <script type="application/ld+json">
     {
@@ -512,7 +512,6 @@
         const insuranceToggle = document.querySelector("#insurance-toggle");
         const initialInsuranceCount = 8;
         let insuranceExpanded = false;
-        const revealSections = [...document.querySelectorAll("main > section:not(.hero)")];
         const reviewList = document.querySelector("#review-list");
         const reviews = [
             "Mi hija ya iba a este laboratorio y no lo cambia por otro. Por esa razón fui yo también. Gracias por la humanidad y comprensión hacia el paciente.",
@@ -534,18 +533,6 @@
             "El mejor y más amoroso de todos.",
             "Excelente atención de parte de todos, súper rápido además."
         ];
-        const staggerGroups = [
-            ".service-board .service-tile",
-            ".review-themes span",
-            ".trust-grid div",
-            ".review-list figure",
-            ".help-list a",
-            ".preparation-list details",
-            ".insurance-list li",
-            ".faq details",
-            ".contact-actions a"
-        ];
-
         // Keep section anchors out of the URL so refreshing doesn't jump back to the last section visited
         const clearHash = () => history.replaceState(null, "", location.pathname + location.search);
         const navigation = performance.getEntriesByType?.("navigation")[0];
@@ -555,8 +542,6 @@
         }
 
         window.addEventListener("hashchange", clearHash);
-
-        document.documentElement.classList.add("motion-ready");
 
         if (reviewList) {
             const shuffledReviews = [...reviews].sort(() => Math.random() - 0.5).slice(0, 2);
@@ -569,40 +554,6 @@
                     <figcaption>Reseña 5 estrellas en Google Maps</figcaption>
                 </figure>
             `).join("");
-        }
-
-        revealSections.forEach((section) => {
-            section.dataset.reveal = "";
-        });
-
-        staggerGroups.forEach((selector) => {
-            document.querySelectorAll(selector).forEach((item, index) => {
-                item.dataset.staggerItem = "";
-                item.style.setProperty("--i", Math.min(index, 10));
-            });
-        });
-
-        const revealObserver = "IntersectionObserver" in window
-            ? new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("is-visible");
-                        observer.unobserve(entry.target);
-                        // Once the stagger has played, hand transitions back to the element's own hover styles
-                        setTimeout(() => {
-                            entry.target.querySelectorAll("[data-stagger-item]").forEach((item) => {
-                                delete item.dataset.staggerItem;
-                            });
-                        }, 1000);
-                    }
-                });
-            }, { threshold: 0, rootMargin: "0px 0px -24px 0px" })
-            : null;
-
-        if (revealObserver) {
-            revealSections.forEach((section) => revealObserver.observe(section));
-        } else {
-            revealSections.forEach((section) => section.classList.add("is-visible"));
         }
 
         mobileMenu?.addEventListener("click", (event) => {
